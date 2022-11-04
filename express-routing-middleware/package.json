@@ -1,0 +1,23 @@
+{
+  "name": "express-routing-middleware",
+  "version": "1.0.0",
+  "description": "Routing and middleware in expressjs",
+  "main": "server.js",
+  "author": "hogivano",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon --watch src src/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^6.0.0",
+    "morgan": "^1.10.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
