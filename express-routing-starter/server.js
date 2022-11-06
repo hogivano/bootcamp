@@ -5,6 +5,18 @@ const routes = require('./routes')
 
 const app = express()
 
+app.use((req, res, next) => {
+  console.log('Logging...')
+  next()
+})
+
+app.use((err, req, res, next) => {
+  console.log('Error handler')
+  res.status(500).send('Something broke!')
+})
+
+app.use('/admin/*', authencticationAdmin)
+
 // index path
 app.get('/', (req, res) => {
   res.send('Hello World!')
