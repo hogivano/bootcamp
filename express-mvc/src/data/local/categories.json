@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Web Developer",
+    "description": "Web Developer"
+  },
+  {
+    "id": 2,
+    "name": "Mobile Developer",
+    "description": "Mobile Developer"
+  },
+  {
+    "id": 3,
+    "name": "PHP",
+    "description": "Programming Language"
+  },
+  {
+    "id": 4,
+    "name": "Javascript",
+    "description": "Programming Language"
+  }
+]
