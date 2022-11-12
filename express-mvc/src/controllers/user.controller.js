@@ -3,10 +3,30 @@ const response = require('../utils/base-response')
 
 const indexView = (req, res, next) => {
   const data = userModel.getUser()
-
+  const msg = req.flash('message')
+  console.log('auth', req.session.auth)
   res.render('user/index', {
-    data: data
+    data: data,
+    msg
   })
+}
+
+const createView = (req, res) => {
+  req.session.auth = null
+  res.render('user/form')
+}
+
+const createUserHandler = (req, res) => {
+  req.flash('message', 'Success create user')
+  req.session.auth = true
+  res.redirect('/user')
+}
+
+const deleteUserHandler = (req, res) => {
+  const { id } = req.params
+  console.log('id', id)
+  req.flash('message', 'Success delete user')
+  res.redirect('/user')
 }
 
 const getUserApi = (req, res) => {
@@ -19,5 +39,8 @@ const getUserApi = (req, res) => {
 
 module.exports = {
   getUserApi,
-  indexView
+  indexView,
+  createView,
+  createUserHandler,
+  deleteUserHandler,
 }

@@ -1,6 +1,7 @@
 const authentication = require("../../middleware/authentication")
 const user = require('./user.route')
 const category = require('./category.route')
+const cors = require('../../middleware/cors')
 
 const API_VERSION = '/api/v1'
 
@@ -13,6 +14,7 @@ module.exports = (router) => {
       message: 'Not Found'
     })
   })
+  router.use(`${API_VERSION}/*`, cors)
 
   return router
 }

@@ -13,14 +13,15 @@ const validation = (model) => {
   return arrMsg
 }
 
-exports.getUser = () => {
+module.exports = {
+  getUser: () => {
     return transaction.get('users')
-}
-
-exports.createUser = (data) => {
-  if (validation(data).length > 0) {
-    throw new Error(validation(data))
+  },
+  createUser: (data) => {
+    if (validation(data).length > 0) {
+      throw new Error(validation(data))
+    }
+    
+    return transaction.create('users', data)
   }
-  
-  return transaction.create('users', data)
 }

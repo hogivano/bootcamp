@@ -1,8 +1,8 @@
 <h1>
-  List User
+  List User <%= msg.length > 0 ? msg[0] : '' %>
 </h1>
 <ul>
   <% data.forEach(function(item){ %>
-    <li><%= item.name %></li>
+    <li><%= item.name %> <form action="/user/<%=item.id%>" method="POST"><input name="_method" value="DELETE" /> <button>Del</button> </form></li>
   <% }); %>
 </ul>

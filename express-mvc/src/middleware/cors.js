@@ -8,7 +8,8 @@ const whitelist = [
 
 const corsOption = {
   origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) != -1 || !origin) {
+    console.log('origin', origin)
+    if (whitelist.indexOf(origin) != -1 || !origin || origin === null) {
       callback(null, true)
     } else {
       callback('Not allowed by CORS', false)
