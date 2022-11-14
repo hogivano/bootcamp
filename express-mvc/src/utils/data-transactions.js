@@ -50,6 +50,13 @@ const update = (table, filter, data) => {
     throw new Error('Data not found')
   }
 
+  // row = {
+  //   id: 1,
+  //  name: 'test',  
+  //  }
+  // data = { name: 'Hen' }
+
+  // objNew = { id: 1, name: 'Hen' }
   rows[indexRow] = checkSchema(table, Object.assign(row, data))
 
   fs.writeFileSync(path.join(__dirname, '../data/local', `${table}.json`), JSON.stringify(rows, null, 2))

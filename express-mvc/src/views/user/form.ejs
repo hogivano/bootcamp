@@ -1,6 +1,11 @@
-<form action="/user" method="POST">
-  <input name="name" />
-  <input name="email" />
+<form action="/user/<%= typeof id !== 'undefined' ? id : '' %>" method="POST">
+  <% if (typeof id !== 'undefined') { %>
+    <input hidden name="_method" value="PUT" />
+  <% } %>
+  <input name="name" placeholder="name"
+    value="<%= typeof data !== 'undefined' ? data.name : '' %>" />
+  <input name="email" placeholder="email"
+    value="<%= typeof data !== 'undefined' ? data.email : '' %>"/>
   <button type="submit">
     Submit
   </button>
