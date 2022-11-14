@@ -1,0 +1,10 @@
+<form action="/category/<%= typeof id !== 'undefined' ? ('update/' + id) : 'create' %>" method="POST">
+  <% if (typeof id !== 'undefined') { %>
+  <input type="text" hidden name="_method" value="PUT" />
+  <% } %>
+  <input name="name" placeholder="name" value="<%= typeof data !== 'undefined' ? data.name : '' %>" />
+  <input name="description" placeholder="description" value="<%= typeof data !== 'undefined' ? data.description : '' %>" />
+  <button type="submit">
+    Submit
+  </button>
+</form>
