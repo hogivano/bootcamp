@@ -1,0 +1,15 @@
+<h1>
+  List User <%= msg.length > 0 ? msg[0] : '' %>
+</h1>
+<a href="/user/create" >Create</a>
+<ul>
+  <% data.forEach(function(item){ %>
+    <li><%= item.name %>
+      <a href="/user/update/<%= item.id %>">Edit</a>
+      <form action="/user/<%=item.id%>" method="POST">
+        <input hidden name="_method" value="DELETE" />
+        <button>Del</button>
+      </form>
+    </li>
+  <% }); %>
+</ul>

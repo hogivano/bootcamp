@@ -1,0 +1,29 @@
+<div>
+  <h1>
+    Categories
+  </h1>
+  <a href="/category/create">
+    Create
+  </a>
+</div>
+<div>
+  <ul>
+    <% data.forEach((item) => { %>
+    <li>
+      <div>
+        <h4>
+          <%= item.name %>
+        </h4>
+        <a href="/category/update/<%= item.id %>">Edit</a>
+        <form action="/category/delete/<%= item.id %>" method="POST">
+          <input name="_method" value="DELETE" hidden />
+          <button>Del</button>
+        </form>
+      </div>
+      <p>
+        <%= item.description %>
+      </p>
+    </li>
+    <% }) %>
+  </ul>
+</div>

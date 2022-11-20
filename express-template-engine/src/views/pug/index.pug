@@ -1,0 +1,26 @@
+head
+  style 
+    include index.css
+body
+  h1 Hello World Pug Template
+    span= 'Testing span render ' + 2*100
+
+  - const testVar = 'Variable testing'
+
+  h2= testVar
+
+  h3.
+    Two lines in belows
+
+  h4.big-text 
+    Big Text using h4
+
+  ul
+    each item in ['henry', 'james', 'joe']
+      li= item
+
+  ul
+    if testVar === 'Variable testing'
+      li= testVar
+    else
+      li= 'Not equal'

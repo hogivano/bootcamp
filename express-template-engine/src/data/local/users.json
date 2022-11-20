@@ -1,0 +1,42 @@
+[
+  {
+    "id": 7,
+    "name": "Pramush",
+    "email": "pramush@gmail.com",
+    "token": "nbq307mk",
+    "role": "admin",
+    "is_blocked": false
+  },
+  {
+    "id": 8,
+    "name": "Hendriyan Ogivano",
+    "email": "hogivano@gmail.com",
+    "token": "dckyk1ft",
+    "role": "admin",
+    "is_blocked": false
+  },
+  {
+    "id": 9,
+    "name": "Hendriyan Ogivano",
+    "email": "me@hogivano.web.id",
+    "token": "j00dnhzo",
+    "role": "admin",
+    "is_blocked": false
+  },
+  {
+    "id": 10,
+    "name": "Arifin Hundi",
+    "email": "hogivano@gmail.com",
+    "token": "iarhaa47",
+    "role": "admin",
+    "is_blocked": false
+  },
+  {
+    "id": 11,
+    "name": "Mirza Hundi",
+    "email": "mirza@gmail.com",
+    "token": "rq1lwlr3",
+    "role": "admin",
+    "is_blocked": false
+  }
+]

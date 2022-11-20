@@ -1,0 +1,33 @@
+{
+  "name": "express-routing-middleware",
+  "version": "1.0.0",
+  "description": "Routing and middleware in expressjs",
+  "main": "server.js",
+  "author": "hogivano",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon --ext '*' --watch src/** --ignore data/** src/server.js"
+  },
+  "dependencies": {
+    "@marko/express": "^2.1.0",
+    "body-parser": "^1.20.1",
+    "consolidate": "^0.16.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "helmet": "^6.0.0",
+    "marko": "^5.22.0",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

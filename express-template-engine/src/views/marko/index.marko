@@ -1,0 +1,17 @@
+class {
+  onCreate() {
+    this.state = {
+      count: 0
+    }
+  }
+  increment() {
+    this.state.count++
+  }
+}
+
+<div>
+  Marko ${state.count}
+  <button on-click(() => alert("Clicked! 🎉"))>
+     Click Me
+  </button>
+</div>
