@@ -14,7 +14,10 @@ const validation = (model) => {
   return arrMsg
 }
 
-const getCategory = () => {
+const getCategory = (filter = null) => {
+  if (filter) {
+    return transaction.get('categories', filter)
+  }
   return transaction.get('categories')
 }
 
@@ -41,6 +44,7 @@ const updateCategory = (data) => {
 
 const deleteCategory = (id) => {
   transaction.remove('categories', (item) => item.id === Number(id))
+  transaction.removeMultiple('categories', (item) => item.category_id === Number(id))
 
   return id
 }

@@ -77,9 +77,21 @@ const remove = (table, filter) => {
   fs.writeFileSync(path.join(__dirname, '../data/local', `${table}.json`), JSON.stringify(rows, null, 2))
 }
 
+const removeMultiple = (table, filter) => {
+  const rows = require(path.join(__dirname, '../data/local', `${table}.json`))
+  const exceptFilter = rows.filter((item) => !filter(item))
+
+  if (rows.length === exceptFilter.length && rows.length !== 0) {
+    throw new Error('Data not found')
+  }
+
+  fs.writeFileSync(path.join(__dirname, '../data/local', `${table}.json`), JSON.stringify(exceptFilter, null, 2))
+}
+
 module.exports = {
   get,
   create,
   update,
-  remove
+  remove,
+  removeMultiple
 }

@@ -1,6 +1,5 @@
 const router = require('express').Router()
 
-const transaction = require('../../utils/data-transactions')
 const response = require('../../utils/base-response')
 const authentication = require("../../middleware/authentication")
 
